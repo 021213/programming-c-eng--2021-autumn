@@ -7,7 +7,11 @@ struct ArrayList {
 	int length;
 	int count;
 
-	ArrayList(int length = 10) : data(new int[length] { 0 }), length(length), count(0) { }
+	ArrayList(int length = 10)
+		: data(new int[length] { 0 }), length(length), count(0)
+	{
+	}
+	
 	ArrayList(ArrayList& list)
 		: data(new int[list.length]), length(list.length), count(list.count)
 	{
@@ -16,6 +20,7 @@ struct ArrayList {
 			data[i] = list.data[i];
 		}
 	}
+	
 	~ArrayList()
 	{
 		delete[] data;
