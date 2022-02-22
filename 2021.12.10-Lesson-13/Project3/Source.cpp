@@ -118,14 +118,6 @@ private:
 		result = copy;
 	}
 
-public:
-	BTree(Node* root = nullptr) : root(root) {};
-
-	void add(int data)
-	{
-		addRec(root, data);
-	}
-
 	Node* extract(int data)
 	{
 		Node*& result = find(root, data);
@@ -139,6 +131,14 @@ public:
 		extractRec(result);
 
 		return copy;
+	}
+
+public:
+	BTree(Node* root = nullptr) : root(root) {};
+
+	void add(int data)
+	{
+		addRec(root, data);
 	}
 
 	void print()
@@ -193,6 +193,7 @@ int main()
 
 	tree.deleteElement(12);
 	tree.print();
+
 	tree.deleteElement(8);
 	tree.print();
 
