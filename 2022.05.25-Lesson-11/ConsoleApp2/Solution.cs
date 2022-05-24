@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace ConsoleApp2
+﻿namespace ConsoleApp2
 {
     class Solution
     {
@@ -13,7 +11,9 @@ namespace ConsoleApp2
             0,0,0,
             0,0,0,
             5,0,10};
+
         private static int A = 'A';
+
         public int RomanToInt(string s)
         {
             int num = 0;
